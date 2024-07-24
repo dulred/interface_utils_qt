@@ -1,5 +1,13 @@
 D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/tianji_autogen/EWIEGA46WW/moc_widget.cpp: D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/widget.h \
   D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/tianji_autogen/moc_predefs.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QFlags \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QList \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QMetaType \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QObject \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QSharedDataPointer \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QString \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QUrl \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/QVariant \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/q20memory.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
@@ -16,6 +24,7 @@ D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_b
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qbytearraylist.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcalendar.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qchar.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcompare.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -26,8 +35,10 @@ D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_b
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qcryptographichash.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qdatastream.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qdatetime.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qdebug.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qflags.h \
@@ -39,11 +50,13 @@ D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_b
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qglobalstatic.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qhash.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qhashfunctions.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qiodevice.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qiodevicebase.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qiterable.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qiterator.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qline.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qlist.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qlocale.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qlogging.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qmalloc.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qmap.h \
@@ -103,6 +116,7 @@ D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_b
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qtversionchecks.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qtypeinfo.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qtypes.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qurl.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qutf8stringview.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qvariant.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -133,7 +147,27 @@ D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_b
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtGui/qtransform.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/QSslConfiguration \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qabstractsocket.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qhostaddress.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qnetworkrequest.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qssl.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qsslcertificate.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qsslconfiguration.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qsslerror.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qsslsocket.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/QRadioButton \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/QWidget \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+  D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/qradiobutton.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \

@@ -20,17 +20,17 @@ QString utils::generateRandomString(int length)
     return randomString;
 }
 
-QString utils::sha1(const QString &input)
+QString utils::sign(const QString &input)
 {
-    QByteArray byteArray = input.toUtf8();
-    QByteArray hash = QCryptographicHash::hash(byteArray, QCryptographicHash::Sha1);
-    return hash.toHex(); // 将哈希值转换为十六进制字符串
-}
+    // 计算 SHA-1 哈希
+    QByteArray sha1Hash = QCryptographicHash::hash(input.toUtf8(), QCryptographicHash::Sha1);
+    QString sha1HashString = sha1Hash.toHex();
 
-QString utils::md5(const QString &input)
-{
-    QByteArray byteArray = input.toUtf8();
-    QByteArray hash = QCryptographicHash::hash(byteArray, QCryptographicHash::Md5);
-    return hash.toHex(); // 将哈希值转换为十六进制字符串
+
+    // 计算 MD5 哈希
+    QByteArray md5Hash = QCryptographicHash::hash(sha1Hash, QCryptographicHash::Md5);
+    QString md5HashString = md5Hash.toHex();
+
+    return md5HashString; // 将哈希值转换为十六进制字符串
 }
 

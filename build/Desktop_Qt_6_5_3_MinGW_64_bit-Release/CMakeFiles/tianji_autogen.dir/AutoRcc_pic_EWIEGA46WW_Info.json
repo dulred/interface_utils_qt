@@ -1,0 +1,27 @@
+{
+	"BUILD_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen",
+	"CMAKE_BINARY_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji",
+	"CMAKE_SOURCE_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/include",
+	"INPUTS" : 
+	[
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/background.jpg",
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/icon.png",
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/style.qss"
+	],
+	"LOCK_FILE" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/CMakeFiles/tianji_autogen.dir/AutoRcc_pic_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "pic" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_pic.cpp",
+	"RCC_EXECUTABLE" : "D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/CMakeFiles/tianji_autogen.dir/AutoRcc_pic_EWIEGA46WW_Used.txt",
+	"SOURCE" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/pic.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

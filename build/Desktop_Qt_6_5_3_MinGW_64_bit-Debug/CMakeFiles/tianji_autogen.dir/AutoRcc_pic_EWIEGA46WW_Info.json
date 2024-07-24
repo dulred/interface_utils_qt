@@ -7,7 +7,12 @@
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
 	"INCLUDE_DIR" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/tianji_autogen/include",
-	"INPUTS" : [ "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/icon.png" ],
+	"INPUTS" : 
+	[
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/background.jpg",
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/icon.png",
+		"D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/resource/style.qss"
+	],
 	"LOCK_FILE" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/CMakeFiles/tianji_autogen.dir/AutoRcc_pic_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "--no-zstd", "-name", "pic" ],

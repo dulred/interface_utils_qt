@@ -1,0 +1,13 @@
+# ninja log v6
+3	561	7434918896255723	tianji_autogen/timestamp	f427015d0545343d
+3	561	7434918896255723	tianji_autogen/mocs_compilation.cpp	f427015d0545343d
+3	561	7434918896255723	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/timestamp	f427015d0545343d
+3	561	7434918896255723	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/mocs_compilation.cpp	f427015d0545343d
+564	689	7434918898366107	tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
+564	689	7434918898366107	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
+724	1565	7434918898816139	CMakeFiles/tianji.dir/utils.cpp.obj	ded13f153c177582
+702	1833	7434918898606112	CMakeFiles/tianji.dir/main.cpp.obj	e94c2a2ddbbaea52
+732	1840	7434918898906249	CMakeFiles/tianji.dir/tianji_autogen/EWIEGA46WW/qrc_pic.cpp.obj	34d51bdd917942a8
+695	1993	7434918898526122	CMakeFiles/tianji.dir/tianji_autogen/mocs_compilation.cpp.obj	7cd3679b8cee68c6
+713	2545	7434918898716123	CMakeFiles/tianji.dir/widget.cpp.obj	6ec807f4729f03fb
+2545	2672	7434918917034740	tianji.exe	cbf296e6aadb9c71

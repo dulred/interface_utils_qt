@@ -27,7 +27,6 @@ Widget::Widget(QWidget *parent)
         QString styleSheet = QLatin1String(file.readAll());
         qApp->setStyleSheet(styleSheet);
     }
-
     // 初始化事件
     init();
 }
@@ -133,13 +132,13 @@ void Widget::showSelectedRadioButton()
 
 void Widget::generateJson()
 {
-    QString jsonTemplate = R"("{
+    QString jsonTemplate = R"({
         "keyword": "123456",
-        "timestamp": {
-            "start_time": "%1",
-            "end_time": "%2"
+        "date": {
+            "begin": "%1",
+            "end": "%2"
         }
-    }")";
+    })";
 
     QString jsonString = jsonTemplate.arg(start_timestamp).arg(end_timestamp);
 
@@ -151,12 +150,12 @@ void Widget::generateUrl()
     QString ts = QString::number(QDateTime::currentDateTime().toSecsSinceEpoch());
     int length = 8; // 你可以修改为你需要的长度
     QString nonce = utils::generateRandomString(length);
-    QString con = ts + nonce + appleid + secret;
-    QString sign = utils::md5(utils::sha1(con));
+    QString con = appleid + secret +  nonce + ts;
+    QString sign = utils::sign(con);
     qDebug()<< sign;
-    QString urlTemplate = R"(https://%1/%2?appleid=%3&ts=%4&nonce=%5&sign=%6)";
+    QString urlTemplate = R"(https://%1/%2?appleid=%3&nonce=%4&ts=%5&sign=%6)";
 
-    QString urlString = urlTemplate.arg(ip).arg(path).arg(appleid).arg(ts).arg(nonce).arg(sign);
+    QString urlString = urlTemplate.arg(ip).arg(path).arg(appleid).arg(nonce).arg(ts).arg(sign);
     url = urlString;
     ui->url->setPlainText(urlString);
 }
@@ -187,6 +186,7 @@ void Widget::onPostRequest() {
     // QByteArray data = jsonDoc.toJson();
 
     networkManager->post(request, this->jsonText.toUtf8());
+    // networkManager->post(request, data);
 }
 
 void Widget::onHttpRequest()
@@ -213,6 +213,7 @@ void Widget::onNetworkReply(QNetworkReply *reply) {
         // qDebug() << "Processed JSON:" << jsonObject;
 
     } else {
+        ui->response->setPlainText("something is error");
         qDebug() << "Network error:" << reply->errorString();
     }
     reply->deleteLater();

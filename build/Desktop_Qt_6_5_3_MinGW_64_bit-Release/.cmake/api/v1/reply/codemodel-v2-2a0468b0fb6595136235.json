@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d4efb1d04c37cdc56dba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tianji",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "tianji::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tianji-Release-b9d6474822c14d780fbd.json",
+					"name" : "tianji",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tianji_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tianji_autogen-Release-a25c3afb40e2a377ec63.json",
+					"name" : "tianji_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tianji_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tianji_autogen_timestamp_deps-Release-fc24fefcbfea018d7f29.json",
+					"name" : "tianji_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release",
+		"source" : "D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
