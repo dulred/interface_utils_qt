@@ -3,13 +3,15 @@
 #include <QRandomGenerator>
 
 #include <QCryptographicHash>
+#include <QDateTime>
 utils::utils() {}
 
 QString utils::generateRandomString(int length)
 {
     const QString characters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
     QString randomString;
-    QRandomGenerator randomGenerator;
+    // 使用当前时间初始化种子
+    QRandomGenerator randomGenerator(QDateTime::currentMSecsSinceEpoch());
 
     for (int i = 0; i < length; ++i) {
         int index = randomGenerator.bounded(characters.size());

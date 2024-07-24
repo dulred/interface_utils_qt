@@ -54,9 +54,9 @@ void Widget::init()
 
     // 设置时间默认值，不然下面生成json字符串如果不设置值的话会乱
     QDateTime startTime = ui->start_time->dateTime();
-    start_timestamp = startTime.toMSecsSinceEpoch();
+    start_timestamp = QString::number(startTime.toSecsSinceEpoch());
     QDateTime endTime = ui->end_time->dateTime();
-    end_timestamp = endTime.toMSecsSinceEpoch();
+    end_timestamp = QString::number(endTime.toSecsSinceEpoch());
 
     // radio默认设置post选中
     ui->post_button->setChecked(true);
@@ -90,7 +90,7 @@ void Widget::onStartTimeChanged()
     QDateTime startTime = ui->start_time->dateTime();
 
     // 转换为时间戳（自1970年1月1日以来的秒数）
-    start_timestamp = startTime.toMSecsSinceEpoch();
+    start_timestamp = QString::number(startTime.toSecsSinceEpoch());
 
     qDebug() << start_timestamp;
 }
@@ -101,7 +101,7 @@ void Widget::onEndTimeChanged()
     QDateTime endTime = ui->end_time->dateTime();
 
     // 转换为时间戳（自1970年1月1日以来的秒数）
-    end_timestamp = endTime.toMSecsSinceEpoch();
+    end_timestamp = QString::number(endTime.toSecsSinceEpoch());
 
     qDebug() << end_timestamp;
 }
@@ -147,17 +147,18 @@ void Widget::generateJson()
 
 void Widget::generateUrl()
 {
-    QString ts = QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-    qDebug() << ts;
+    QString ts = QString::number(QDateTime::currentDateTime().toSecsSinceEpoch());
     int length = 8; // 你可以修改为你需要的长度
     QString nonce = utils::generateRandomString(length);
-    QString con = appid + secret +  nonce + ts;
+    qDebug()<< nonce;
+    QString con = appid + secret + nonce + ts;
     QString sign = utils::sign(con);
-    qDebug()<< sign;
+    qDebug()<< sign << "---" << sign.length();
     QString urlTemplate = R"(http://%1:%2/%3?appid=%4&nonce=%5&ts=%6&sign=%7)";
 
     QString urlString = urlTemplate.arg(ip).arg(port).arg(path).arg(appid).arg(nonce).arg(ts).arg(sign);
     url = urlString.trimmed();
+    qDebug()<< url;
     ui->url->setPlainText(urlString);
 }
 

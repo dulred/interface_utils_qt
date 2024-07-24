@@ -42,8 +42,8 @@ private:
     QString secret;
     QString ip;
     QString path;
-    qint64 start_timestamp;
-    qint64 end_timestamp;
+    QString start_timestamp;
+    QString end_timestamp;
     QString jsonText;
     QString url;
     QString re_way;

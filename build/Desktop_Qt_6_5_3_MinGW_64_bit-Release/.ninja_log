@@ -1,13 +1,13 @@
 # ninja log v6
-2	442	7435011846753474	tianji_autogen/timestamp	f427015d0545343d
-2	442	7435011846753474	tianji_autogen/mocs_compilation.cpp	f427015d0545343d
-2	442	7435011846753474	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/timestamp	f427015d0545343d
-2	442	7435011846753474	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/mocs_compilation.cpp	f427015d0545343d
-444	532	7435011848328465	tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
-444	532	7435011848328465	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
-554	1146	7435011848609215	CMakeFiles/tianji.dir/utils.cpp.obj	ded13f153c177582
-561	1310	7435011848674264	CMakeFiles/tianji.dir/tianji_autogen/EWIEGA46WW/qrc_pic.cpp.obj	34d51bdd917942a8
-532	1415	7435011848393533	CMakeFiles/tianji.dir/tianji_autogen/mocs_compilation.cpp.obj	7cd3679b8cee68c6
-539	1430	7435011848464060	CMakeFiles/tianji.dir/main.cpp.obj	e94c2a2ddbbaea52
-546	1967	7435011848534104	CMakeFiles/tianji.dir/widget.cpp.obj	6ec807f4729f03fb
-1967	2098	7435011862739734	tianji.exe	cbf296e6aadb9c71
+5	758	7435052538624868	tianji_autogen/timestamp	f427015d0545343d
+5	758	7435052538624868	tianji_autogen/mocs_compilation.cpp	f427015d0545343d
+5	758	7435052538624868	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/timestamp	f427015d0545343d
+5	758	7435052538624868	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/mocs_compilation.cpp	f427015d0545343d
+761	885	7435052540784216	tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
+761	885	7435052540784216	D:/dulred/dev/source/c++/qt6.5.3/tianji/tianji/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release/tianji_autogen/EWIEGA46WW/qrc_pic.cpp	b876affd54971dd7
+911	1768	7435052541147028	CMakeFiles/tianji.dir/utils.cpp.obj	ded13f153c177582
+885	1874	7435052540891601	CMakeFiles/tianji.dir/tianji_autogen/mocs_compilation.cpp.obj	7cd3679b8cee68c6
+921	1880	7435052541252171	CMakeFiles/tianji.dir/tianji_autogen/EWIEGA46WW/qrc_pic.cpp.obj	34d51bdd917942a8
+895	1913	7435052540976761	CMakeFiles/tianji.dir/main.cpp.obj	e94c2a2ddbbaea52
+902	2429	7435052541061845	CMakeFiles/tianji.dir/widget.cpp.obj	6ec807f4729f03fb
+2429	2561	7435052556326387	tianji.exe	cbf296e6aadb9c71
