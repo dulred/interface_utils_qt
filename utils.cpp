@@ -29,7 +29,7 @@ QString utils::sign(const QString &input)
 
 
     // 计算 MD5 哈希
-    QByteArray md5Hash = QCryptographicHash::hash(sha1Hash, QCryptographicHash::Md5);
+    QByteArray md5Hash = QCryptographicHash::hash(sha1HashString.toUtf8(), QCryptographicHash::Md5);
     QString md5HashString = md5Hash.toHex();
 
     return md5HashString; // 将哈希值转换为十六进制字符串
