@@ -1,1 +1,1 @@
-![image-20240724104527210](./md-template.png)
+![image-20240724104527210](./docs/md-template.png)
