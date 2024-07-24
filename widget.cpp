@@ -10,6 +10,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
+
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget), networkManager(new QNetworkAccessManager(this))
@@ -34,10 +35,11 @@ Widget::Widget(QWidget *parent)
 void Widget::init()
 {
 
-    connect(ui->appleid,&QTextEdit::textChanged,this,&Widget::onAppleIdChanged);
+    connect(ui->appid,&QTextEdit::textChanged,this,&Widget::onAppleIdChanged);
     connect(ui->secret,&QTextEdit::textChanged,this,&Widget::onSecretChanged);
     connect(ui->ip,&QTextEdit::textChanged,this,&Widget::onIpChanged);
     connect(ui->path,&QTextEdit::textChanged,this,&Widget::onPathChanged);
+    connect(ui->port,&QTextEdit::textChanged,this,&Widget::onPortChanged);
 
     connect(ui->start_time,&QDateTimeEdit::dateTimeChanged,this,&Widget::onStartTimeChanged);
     connect(ui->end_time,&QDateTimeEdit::dateTimeChanged,this,&Widget::onEndTimeChanged);
@@ -52,9 +54,9 @@ void Widget::init()
 
     // 设置时间默认值，不然下面生成json字符串如果不设置值的话会乱
     QDateTime startTime = ui->start_time->dateTime();
-    start_timestamp = startTime.toSecsSinceEpoch();
+    start_timestamp = startTime.toMSecsSinceEpoch();
     QDateTime endTime = ui->end_time->dateTime();
-    end_timestamp = endTime.toSecsSinceEpoch();
+    end_timestamp = endTime.toMSecsSinceEpoch();
 
     // radio默认设置post选中
     ui->post_button->setChecked(true);
@@ -66,19 +68,19 @@ void Widget::init()
 }
 
 void Widget::onAppleIdChanged(){
-    appleid = ui->appleid->toPlainText();
-    qDebug() << appleid;
+    appid = ui->appid->toPlainText().trimmed();
+    qDebug() << appid;
 }
 void Widget::onSecretChanged(){
-    secret = ui->secret->toPlainText();
+    secret = ui->secret->toPlainText().trimmed();
     qDebug() << secret;
 }
 void Widget::onIpChanged(){
-    ip = ui->ip->toPlainText();
+    ip = ui->ip->toPlainText().trimmed();
     qDebug() << ip;
 }
 void Widget::onPathChanged(){
-    path = ui->path->toPlainText();
+    path = ui->path->toPlainText().trimmed();
     qDebug() << path;
 }
 
@@ -88,7 +90,7 @@ void Widget::onStartTimeChanged()
     QDateTime startTime = ui->start_time->dateTime();
 
     // 转换为时间戳（自1970年1月1日以来的秒数）
-    start_timestamp = startTime.toSecsSinceEpoch();
+    start_timestamp = startTime.toMSecsSinceEpoch();
 
     qDebug() << start_timestamp;
 }
@@ -99,7 +101,7 @@ void Widget::onEndTimeChanged()
     QDateTime endTime = ui->end_time->dateTime();
 
     // 转换为时间戳（自1970年1月1日以来的秒数）
-    end_timestamp = endTime.toSecsSinceEpoch();
+    end_timestamp = endTime.toMSecsSinceEpoch();
 
     qDebug() << end_timestamp;
 }
@@ -107,13 +109,11 @@ void Widget::onEndTimeChanged()
 void Widget::onJsonTextChanged()
 {
     jsonText = ui->jsonText->toPlainText();
-    qDebug()<<jsonText <<"666666666666666666666666";
 }
 
 void Widget::onUrlChanged()
 {
     url = ui->url->toPlainText();
-    qDebug()<<url <<"7777777777777777777777777777777";
 }
 
 void Widget::showSelectedRadioButton()
@@ -147,22 +147,29 @@ void Widget::generateJson()
 
 void Widget::generateUrl()
 {
-    QString ts = QString::number(QDateTime::currentDateTime().toSecsSinceEpoch());
+    QString ts = QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+    qDebug() << ts;
     int length = 8; // 你可以修改为你需要的长度
     QString nonce = utils::generateRandomString(length);
-    QString con = appleid + secret +  nonce + ts;
+    QString con = appid + secret +  nonce + ts;
     QString sign = utils::sign(con);
     qDebug()<< sign;
-    QString urlTemplate = R"(https://%1/%2?appleid=%3&nonce=%4&ts=%5&sign=%6)";
+    QString urlTemplate = R"(http://%1:%2/%3?appid=%4&nonce=%5&ts=%6&sign=%7)";
 
-    QString urlString = urlTemplate.arg(ip).arg(path).arg(appleid).arg(nonce).arg(ts).arg(sign);
-    url = urlString;
+    QString urlString = urlTemplate.arg(ip).arg(port).arg(path).arg(appid).arg(nonce).arg(ts).arg(sign);
+    url = urlString.trimmed();
     ui->url->setPlainText(urlString);
 }
 
 void Widget::send()
 {
     onHttpRequest();
+}
+
+void Widget::onPortChanged()
+{
+    port = ui->port->toPlainText().trimmed();
+    qDebug() << port;
 }
 
 
@@ -203,10 +210,26 @@ void Widget::onHttpRequest()
 void Widget::onNetworkReply(QNetworkReply *reply) {
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray responseData = reply->readAll();
-        QString responseString = QString::fromUtf8(responseData);
+        // 获取 Content-Type 响应头
+        QString contentType = reply->header(QNetworkRequest::ContentTypeHeader).toString();
+
+        // 根据 Content-Type 判断编码
+        QString responseString;
+        if (contentType.contains("charset=UTF-8", Qt::CaseInsensitive)) {
+            responseString = QString::fromUtf8(responseData);
+        } else if (contentType.contains("charset=UTF-16", Qt::CaseInsensitive)) {
+            responseString = QString::fromUtf16(reinterpret_cast<const ushort*>(responseData.constData()));
+        } else {
+            // 处理默认的 UTF-8 编码
+            responseString = QString::fromUtf8(responseData);
+        }
+
+        // 如果内容包含 Unicode 转义字符
+        responseString = utils::decodeUnicodeEscapes(responseString);
 
         qDebug() << "Response:" << responseString;
         ui->response->setPlainText(responseString);
+
         // QJsonDocument jsonDoc = QJsonDocument::fromJson(responseData);
         // QJsonObject jsonObject = jsonDoc.object();
         // Process JSON object if needed
@@ -233,6 +256,4 @@ Widget::~Widget()
 {
     delete ui;
 }
-
-
 

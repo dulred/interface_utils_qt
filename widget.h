@@ -34,10 +34,11 @@ private slots:
     void generateJson();
     void generateUrl();
     void send();
+    void onPortChanged();
 
 private:
     Ui::Widget *ui;
-    QString appleid;
+    QString appid;
     QString secret;
     QString ip;
     QString path;
@@ -46,6 +47,7 @@ private:
     QString jsonText;
     QString url;
     QString re_way;
+    QString port;
 private slots:
     void onGetRequest();
     void onPostRequest();

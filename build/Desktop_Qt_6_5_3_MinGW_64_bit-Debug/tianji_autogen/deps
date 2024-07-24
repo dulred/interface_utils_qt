@@ -205,6 +205,14 @@ tianji_autogen/timestamp: \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core/QtInstallPaths.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatAdditionalTargetInfo.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfig.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfigVersion.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets-relwithdebinfo.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets.cmake \
+	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatVersionlessTargets.cmake \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake \
 	D:/dulred/dev/software/Qt6.5.3/6.5.3/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake \
